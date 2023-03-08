@@ -30,9 +30,9 @@ String digitValidationAlgorithm(String target) {
 
   final multiplyResult = targetListReversed.map((el) {
     final elAsNumber = int.parse(el);
-    final x = elAsNumber * multiplyFactor;
+    final elMultiplied = elAsNumber * multiplyFactor;
     multiplyFactor++;
-    return x;
+    return elMultiplied;
   }).toList();
 
   final sumResult = multiplyResult.reduce((acc, current) => acc + current);
