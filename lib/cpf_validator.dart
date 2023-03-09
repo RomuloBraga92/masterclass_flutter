@@ -6,6 +6,7 @@ class Cpf {
   String get cpf => _cpf;
 
   bool cpfValidator() {
+    if (_cpf.length != 11) return false;
     final onlyNumbersCpf = cpf.replaceAll('.', '').replaceAll('-', '');
     final firstDigitInput =
         onlyNumbersCpf.substring(0, onlyNumbersCpf.length - 2);
